@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDG Adana - Innovate. Connect. Grow.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -53,61 +57,151 @@
     </div>
 
     <div class="page-bg">
+        <!-- Background Video (Lütfen buraya .mp4 formatında bir video linki veya dosya yolu ekleyin) -->
+        <video id="bg-video" autoplay loop muted playsinline>
+            <source src="images/devfest2025özet.mp4" type="video/mp4">
+        </video>
         <div class="floating-shape shape1"></div>
         <div class="floating-shape shape2"></div>
         <div class="floating-shape shape3"></div>
-        <canvas id="particleCanvas"></canvas>
     </div>
 
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="floating-shape shape1"></div>
-            <div class="floating-shape shape2"></div>
-            <div class="floating-shape shape3"></div>
-            <canvas id="particleCanvas"></canvas>
+    <section class="hero" id="hero">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Slide 0: Welcome -->
+            <div class="slide active">
+                <div class="hero-content">
+                    <div class="slide-icon">
+                        <img class="gdg-logo" style="width: 100px; height: 65px;" src="images/Logo.png" alt="GDG Logo">
+                    </div>
+                    <h1 class="translate" data-en="Welcome to GDG Adana" data-tr="GDG Adana'ya Hoş Geldiniz">
+                        Welcome to GDG Adana</h1>
+                    <p class="translate"
+                        data-en="We are a community of developers, designers, and tech enthusiasts building the future together with Google technologies."
+                        data-tr="Google teknolojileriyle birlikte geleceği inşa eden geliştiriciler, tasarımcılar ve teknoloji tutkunlarından oluşan bir topluluğuz.">
+                        We are a community of developers, designers, and tech enthusiasts building the future together
+                        with Google technologies.</p>
+                </div>
+            </div>
+
+            <!-- Slide 1: Main Intro -->
+            <div class="slide">
+                <div class="hero-content">
+                    <h1 class="translate" data-en="Innovate. Connect. Grow." data-tr="Yenilik Yap. Bağlan. Geliş.">
+                        Innovate. Connect. Grow.</h1>
+                    <p class="translate"
+                        data-en="Join a vibrant community of developers, creators, and tech enthusiasts pushing boundaries together."
+                        data-tr="Sınırları birlikte zorlayan geliştiriciler, yaratıcılar ve teknoloji tutkunlarından oluşan canlı bir topluluğa katılın.">
+                        Join a vibrant community of developers, creators, and tech enthusiasts pushing boundaries
+                        together.</p>
+                    <a href="https://gdg.community.dev/gdg-adana/" target="_blank" class="cta-button translate"
+                        data-en="Join Our Community" data-tr="Topluluğumuza Katıl">Join Our Community</a>
+                </div>
+            </div>
+
+            <!-- Slide 2: WhatsApp -->
+            <div class="slide">
+                <div class="hero-content">
+                    <div class="slide-icon">
+                        <svg height="80px" width="80px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 418.135 418.135"
+                            xml:space="preserve" fill="#49c436">
+                            <g>
+                                <path
+                                    d="M198.929,0.242C88.5,5.5,1.356,97.466,1.691,208.02c0.102,33.672,8.231,65.454,22.571,93.536 L2.245,408.429c-1.191,5.781,4.023,10.843,9.766,9.483l104.723-24.811c26.905,13.402,57.125,21.143,89.108,21.631 c112.869,1.724,206.982-87.897,210.5-200.724C420.113,93.065,320.295-5.538,198.929,0.242z M323.886,322.197 c-30.669,30.669-71.446,47.559-114.818,47.559c-25.396,0-49.71-5.698-72.269-16.935l-14.584-7.265l-64.206,15.212l13.515-65.607 l-7.185-14.07c-11.711-22.935-17.649-47.736-17.649-73.713c0-43.373,16.89-84.149,47.559-114.819 c30.395-30.395,71.837-47.56,114.822-47.56C252.443,45,293.218,61.89,323.887,92.558c30.669,30.669,47.559,71.445,47.56,114.817 C371.446,250.361,354.281,291.803,323.886,322.197z">
+                                </path>
+                                <path
+                                    d="M309.712,252.351l-40.169-11.534c-5.281-1.516-10.968-0.018-14.816,3.903l-9.823,10.008 c-4.142,4.22-10.427,5.576-15.909,3.358c-19.002-7.69-58.974-43.23-69.182-61.007c-2.945-5.128-2.458-11.539,1.158-16.218 l8.576-11.095c3.36-4.347,4.069-10.185,1.847-15.21l-16.9-38.223c-4.048-9.155-15.747-11.82-23.39-5.356 c-11.211,9.482-24.513,23.891-26.13,39.854c-2.851,28.144,9.219,63.622,54.862,106.222c52.73,49.215,94.956,55.717,122.449,49.057 c15.594-3.777,28.056-18.919,35.921-31.317C323.568,266.34,319.334,255.114,309.712,252.351z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h1 class="translate" data-en="WhatsApp Community" data-tr="WhatsApp Topluluğu">WhatsApp Community
+                    </h1>
+                    <p class="translate"
+                        data-en="Join our WhatsApp community to communicate quickly and not miss out on opportunities."
+                        data-tr="Hızlı iletişim kurmak ve fırsatları kaçırmamak için WhatsApp topluluğumuza katılın.">
+                        Join our WhatsApp community to communicate quickly and not miss out on opportunities.</p>
+                    <a href="https://chat.whatsapp.com/LkQogReG5nJ7YbnMSZ90xA?mode=gi_t" target="_blank"
+                        class="cta-button translate" style="background: #49c436; color: white;" data-en="Join Now"
+                        data-tr="Hemen Katıl">Join Now</a>
+                </div>
+            </div>
+
+            <!-- Slide 3: Instagram -->
+            <div class="slide">
+                <div class="hero-content">
+                    <div class="slide-icon">
+                        <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                    fill="#ff4013"></path>
+                                <path
+                                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                                    fill="#ff4013"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                                    fill="#ff4013"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h1 class="translate" data-en="Instagram" data-tr="Instagram">Instagram</h1>
+                    <p class="translate" data-en="Follow us on Instagram for event photos, announcements, and more."
+                        data-tr="Etkinlik fotoğrafları, duyurular ve daha fazlası için bizi Instagram'da takip edin.">
+                        Follow us on Instagram for event photos, announcements, and more.</p>
+                    <a href="https://www.instagram.com/gdg_adana?igsh=eHdvczloY3hqOTIy" target="_blank"
+                        class="cta-button translate" style="background: #ff4013; color: white;" data-en="Follow Us"
+                        data-tr="Takip Et">Follow Us</a>
+                </div>
+            </div>
         </div>
-        <div class="hero-content">
-            <h1 class="translate" data-en="Innovate. Connect. Grow." data-tr="Yenilik Yap. Bağlan. Geliş.">Innovate.
-                Connect. Grow.</h1>
-            <p class="translate"
-                data-en="Join a vibrant community of developers, creators, and tech enthusiasts pushing boundaries together."
-                data-tr="Sınırları birlikte zorlayan geliştiriciler, yaratıcılar ve teknoloji tutkunlarından oluşan canlı bir topluluğa katılın.">
-                Join a vibrant community of developers, creators, and tech enthusiasts pushing boundaries together.</p>
-            <a href="https://gdg.community.dev/gdg-adana/" target="_blank" class="cta-button translate"
-                data-en="Join Our Community" data-tr="Topluluğumuza Katıl"
-                style="background: #fff; color: var(--google-blue);">Join Our Community</a>
+
+        <div class="slider-nav">
+            <div class="slider-dot active" data-index="0"></div>
+            <div class="slider-dot" data-index="1"></div>
+            <div class="slider-dot" data-index="2"></div>
+            <div class="slider-dot" data-index="3"></div>
         </div>
     </section>
 
     <section id="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h3 class="translate" data-en="Welcome to Our Community" data-tr="Topluluğumuza Hoş Geldiniz">Welcome to
-                    Our Community</h3>
-                <p class="translate"
-                    data-en="We are a passionate group of developers, designers, and tech enthusiasts united by our love for technology and innovation."
-                    data-tr="Teknoloji ve yeniliğe olan sevgimizle birleşmiş, tutkulu bir geliştirici, tasarımcı ve teknoloji meraklısı grubuyuz.">
-                    We are a passionate group of developers, designers, and tech enthusiasts united by our love for
-                    technology and innovation.</p>
-                <p class="translate"
-                    data-en="Through workshops, hackathons, and networking events, we empower our members to build amazing projects."
-                    data-tr="Atölyeler, hackathonlar ve ağ oluşturma etkinlikleri aracılığıyla, üyelerimizi harika projeler oluşturmaları için güçlendiriyoruz.">
-                    Through workshops, hackathons, and networking events, we empower our members to build amazing
-                    projects.</p>
-            </div>
-            <div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label translate" data-en="Events" data-tr="Etkinlik">Events</div>
+        <div class="about-container">
+            <div class="about-block">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 class="translate" data-en="Welcome to Our Community" data-tr="Topluluğumuza Hoş Geldiniz">
+                            Welcome to
+                            Our Community</h3>
+                        <p class="translate"
+                            data-en="We are a passionate group of developers, designers, and tech enthusiasts united by our love for technology and innovation."
+                            data-tr="Teknoloji ve yeniliğe olan sevgimizle birleşmiş, tutkulu bir geliştirici, tasarımcı ve teknoloji meraklısı grubuyuz.">
+                            We are a passionate group of developers, designers, and tech enthusiasts united by our love
+                            for
+                            technology and innovation.</p>
+                        <p class="translate"
+                            data-en="Through workshops, hackathons, and networking events, we empower our members to build amazing projects."
+                            data-tr="Atölyeler, hackathonlar ve ağ oluşturma etkinlikleri aracılığıyla, üyelerimizi harika projeler oluşturmaları için güçlendiriyoruz.">
+                            Through workshops, hackathons, and networking events, we empower our members to build
+                            amazing
+                            projects.</p>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label translate" data-en="Speakers" data-tr="Konuşmacı">Speakers</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label translate" data-en="Partners" data-tr="Ortak">Partners</div>
+                    <div>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label translate" data-en="Events" data-tr="Etkinlik">Events</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label translate" data-en="Speakers" data-tr="Konuşmacı">Speakers</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label translate" data-en="Partners" data-tr="Ortak">Partners</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,7 +214,7 @@
         <div class="events-grid">
             <div class="event-card">
                 <a style="text-decoration: none; color: inherit;"
-                    href="https://gdg.community.dev/events/details/google-gdg-adana-presents-build-with-ai-adana-2/cohost-gdg-adana/">
+                    href="https://kommunity.com/gdg-adana/events/build-with-ai-adana-2026-ace75ac0">
                     <div class="event-image">
                         <img src="images/buildwithai.png" alt="devfest2026">
                     </div>
@@ -142,7 +236,7 @@
         <br>
         <div class="events-grid">
             <div class="event-card">
-                <a style="text-decoration: none; color: inherit;" href="devfest.html">
+                <a style="text-decoration: none; color: inherit;" href="">
                     <div class="event-image">
                         <img src="images/event.png" alt="devfest2026">
                     </div>

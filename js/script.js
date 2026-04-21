@@ -54,95 +54,53 @@ function toggleLanguage() {
 
 function detectBrowserLanguage() {
     const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang.toLowerCase().startsWith('tr')) {
-        setLanguage('tr');
-    } else {
+    if (browserLang.toLowerCase().startsWith('en')) {
         setLanguage('en');
+    } else {
+        setLanguage('tr');
     }
 }
 
 detectBrowserLanguage();
 
-// Particle canvas animation
-const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
+// Hero Slider
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.slider-dot');
+const slideInterval = 5000; // 5 seconds
+let slideTimer;
 
-function resizeCanvas() {
-    // Set canvas to full viewport size
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+function goToSlide(index) {
+    if (slides.length === 0) return;
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    
+    currentSlide = (index + slides.length) % slides.length;
+    
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+    resetSlideTimer();
 }
 
-
-
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedX = Math.random() * 1 - 0.5;
-        this.speedY = Math.random() * 1 - 0.5;
-        this.opacity = Math.random() * 0.5 + 0.2;
-        this.color = ['#4285f4', '#ea4335', '#fbbc04', '#34a853'][Math.floor(Math.random() * 4)];
-    }
-
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
-    }
-
-    draw() {
-        ctx.fillStyle = this.color;
-        ctx.globalAlpha = this.opacity;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
+function nextSlide() {
+    goToSlide(currentSlide + 1);
 }
 
-function initParticles() {
-    particles = [];
-    const particleCount = window.innerWidth < 768 ? 40 : 80;
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
+function resetSlideTimer() {
+    clearInterval(slideTimer);
+    slideTimer = setInterval(nextSlide, slideInterval);
 }
 
-function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(particle => {
-        particle.update();
-        particle.draw();
+// Initialize slider events
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        goToSlide(parseInt(dot.getAttribute('data-index')));
     });
-    ctx.globalAlpha = 1;
-    requestAnimationFrame(animateParticles);
+});
+
+if (slides.length > 0) {
+    resetSlideTimer();
 }
-
-// Initialize canvas
-resizeCanvas();
-initParticles();
-animateParticles();
-
-// Also resize on load to ensure proper sizing
-window.addEventListener('load', () => {
-    resizeCanvas();
-    initParticles();
-});
-
-// Debounce resize events for better performance
-let resizeTimeout;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        resizeCanvas();
-        initParticles();
-    }, 100);
-});
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
