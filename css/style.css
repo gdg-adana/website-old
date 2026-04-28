@@ -433,6 +433,21 @@ section {
     margin: 0 auto;
 }
 
+#events {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+#join {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#events .section-title,
+#join .section-title {
+    margin-bottom: 40px;
+}
+
 .section-title {
     font-size: clamp(32px, 5vw, 48px);
     text-align: center;
@@ -528,89 +543,130 @@ section {
 /* Events Section */
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 20px;
+    justify-items: center;
 }
 
 .event-card {
-    background: var(--card-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--card-border);
-    border-radius: 24px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: var(--glass-shadow);
+    box-shadow: none;
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: calc(100vh - 220px);
+    max-height: calc(100vh - 220px);
+}
+
+.event-card a,
+.event-card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 2;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(0, 0, 0, 0.7) 60%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: 1;
+    transition: background 0.4s ease;
+}
+
+.event-card:hover .event-overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.6) 60%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
 }
 
 .event-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border-color: var(--google-blue);
-}
-
-.event-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    /* Banner ratio */
-    overflow: hidden;
-    background: var(--bg-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.event-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* Yazıların kesilmemesi için contain kullanıyoruz */
-    transition: transform 0.6s ease;
-}
-
-.event-card:hover .event-image img {
-    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .event-content {
-    padding: 30px;
+    padding: 25px 30px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 3;
 }
 
 .event-date {
-    color: var(--google-blue);
+    color: #8ab4f8;
     font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 13px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .event-title {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: var(--text-primary);
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .event-desc {
-    color: var(--text-secondary);
-    margin-bottom: 25px;
-    flex-grow: 1;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+    flex-grow: 0;
+    font-size: 14px;
+}
+
+.event-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .event-button {
-    align-self: flex-start;
+    display: inline-block;
     padding: 10px 24px;
     border-radius: 50px;
-    background: var(--bg-secondary);
-    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
     font-weight: 600;
     transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.event-button-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .event-card:hover .event-button {
@@ -618,22 +674,32 @@ section {
     color: #fff;
 }
 
+.event-card:hover .event-button-outline {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
 /* Join Section */
 .join-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
 }
 
 .join-card {
     background: var(--card-bg);
     backdrop-filter: var(--glass-blur);
     border: 1px solid var(--card-border);
-    padding: 50px 30px;
-    border-radius: 24px;
+    padding: 30px 24px;
+    border-radius: 20px;
     text-align: center;
     box-shadow: var(--glass-shadow);
     transition: all 0.4s ease;
+    max-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .join-card:hover {
@@ -653,20 +719,21 @@ section {
 }
 
 .join-icon-wrapper {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
     background: var(--bg-secondary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .join-icon-wrapper svg {
-    width: 40px !important;
-    height: 40px !important;
+    width: 32px !important;
+    height: 32px !important;
     max-width: 100%;
 }
 
@@ -675,19 +742,19 @@ section {
 }
 
 .join-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .join-card p {
     color: var(--text-secondary);
-    margin-bottom: 30px;
-    font-size: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .join-button {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 10px 26px;
     border-radius: 50px;
     color: #fff !important;
     text-decoration: none;
@@ -695,6 +762,8 @@ section {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    font-size: 14px;
+    flex-shrink: 0;
 }
 
 #jb-green {

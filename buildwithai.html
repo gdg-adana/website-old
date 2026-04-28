@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build with AI 2026 - GDG Adana</title>
+    <meta name="description"
+        content="Build with AI 2026 - GDG Adana etkinliği. Yapay zeka araçlarıyla uygulama geliştirmeyi öğrenin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buildwithai.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo">
+                    <img class="gdg-logo" style="width: 60px; height: 40px;" src="images/Logo.png" alt="logo">
+                    <div class="logo-text-container">
+                        <span class="logo-text">Google Developer Group</span>
+                        <span class="logo-subtext">Adana</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html" class="translate" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+                <li><a href="#about-event" class="translate" data-en="About" data-tr="Hakkında">About</a></li>
+                <li><a href="#speakers" class="translate" data-en="Speakers" data-tr="Konuşmacılar">Speakers</a></li>
+                <li><a href="#register" class="translate" data-en="Register" data-tr="Başvuru">Register</a></li>
+            </ul>
+            <button class="lang-toggle desktop-lang-toggle" id="desktopLangToggle">EN</button>
+            <button class="theme-toggle desktop-theme-toggle" id="themeToggle"><img id="theme"
+                    style="width: 20px; height: 20px;" src="images/night-mode.png" alt="dark-light"></button>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html" class="translate mobile-link" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+            <li><a href="#about-event" class="translate mobile-link" data-en="About" data-tr="Hakkında">About</a></li>
+            <li><a href="#speakers" class="translate mobile-link" data-en="Speakers" data-tr="Konuşmacılar">Speakers</a>
+            </li>
+            <li><a href="#register" class="translate mobile-link" data-en="Register" data-tr="Başvuru">Register</a></li>
+        </ul>
+        <button class="mobile-lang-toggle" id="mobileLangToggle">
+            <span class="translate" data-en="English" data-tr="Türkçe">English</span>
+        </button>
+        <button class="mobile-theme-toggle" id="mobileThemeToggle">
+            <img id="mobileTheme" style="width: 20px; height: 20px;" src="images/night-mode.png" alt="dark-light">
+            <span class="translate" data-en="Theme" data-tr="Tema">Theme</span>
+        </button>
+    </div>
+
+    <div class="page-bg">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+        <div class="floating-shape shape3"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bwai-hero" id="hero">
+        <div class="bwai-hero-content">
+            <div class="bwai-hero-logo">
+                <img src="images/buildwithai.png" alt="Build with AI 2026">
+            </div>
+            <div class="bwai-hero-info">
+
+                <h1 class="translate" data-en="Build with AI" data-tr="Build with AI">Build with AI</h1>
+                <p class="bwai-hero-desc translate"
+                    data-en="An event series where we learn to develop applications by actually coding, not just staying theoretical, using artificial intelligence tools."
+                    data-tr="Yapay zeka araçlarını kullanarak, sadece teoride kalmayıp bizzat kod yazarak uygulama geliştirmeyi öğrendiğimiz bir etkinlik serisi.">
+                    An event series where we learn to develop applications by actually coding, not just staying
+                    theoretical, using artificial intelligence tools.
+                </p>
+                <a href="https://kommunity.com/gdg-adana/events/build-with-ai-adana-2026-ace75ac0" target="_blank"
+                    class="cta-button translate" data-en="Register Now" data-tr="Hemen Başvur">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Dates Section -->
+    <div class="bwai-dates-container">
+        <div class="bwai-event-dates">
+            <h3 class="bwai-main-date translate" data-en="May 9-10, 2026" data-tr="9-10 Mayıs 2026">9-10 Mayıs 2026</h3>
+            <p class="bwai-main-deadline translate" data-en="Deadline: May 2, 2026" data-tr="Son Başvuru: 2 Mayıs 2026">
+                Son Başvuru: 2 Mayıs 2026</p>
+        </div>
+    </div>
+
+    <!-- About Event -->
+    <section id="about-event">
+        <h2 class="section-title translate" data-en="About the Event" data-tr="Etkinlik Hakkında">About the Event</h2>
+        <div class="bwai-about-grid">
+            <div class="bwai-about-card">
+                <div class="bwai-about-icon">🤖</div>
+                <h3 class="translate" data-en="Hands-on Coding" data-tr="Uygulamalı Kodlama">Hands-on Coding</h3>
+                <p class="translate"
+                    data-en="Write real code with AI tools like Gemini and Gemma. No theoretical lectures — pure practice."
+                    data-tr="Gemini ve Gemma gibi yapay zeka araçlarıyla gerçek kod yazın. Teorik ders yok — tamamen uygulama.">
+                    Write real code with AI tools like Gemini and Gemma. No theoretical lectures — pure practice.
+                </p>
+            </div>
+            <div class="bwai-about-card">
+                <div class="bwai-about-icon">🎯</div>
+                <h3 class="translate" data-en="Expert Speakers" data-tr="Uzman Konuşmacılar">Expert Speakers</h3>
+                <p class="translate"
+                    data-en="Learn from industry professionals from THY Turkish Technology who build real-world AI solutions."
+                    data-tr="Gerçek dünyada yapay zeka çözümleri geliştiren THY Turkish Technology'den sektör profesyonellerinden öğrenin.">
+                    Learn from industry professionals from THY Turkish Technology who build real-world AI solutions.
+                </p>
+            </div>
+            <div class="bwai-about-card">
+                <div class="bwai-about-icon">🚀</div>
+                <h3 class="translate" data-en="2-Day Experience" data-tr="2 Günlük Deneyim">2-Day Experience</h3>
+                <p class="translate"
+                    data-en="Two full days of workshops, talks, and networking. Build projects you can showcase in your portfolio."
+                    data-tr="İki tam gün atölye, konuşma ve ağ oluşturma. Portföyünüzde sergileyebileceğiniz projeler oluşturun.">
+                    Two full days of workshops, talks, and networking. Build projects you can showcase in your
+                    portfolio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers">
+        <h2 class="section-title translate" data-en="Speakers" data-tr="Konuşmacılar">Speakers</h2>
+        <p class="bwai-speakers-subtitle translate" data-en="Meet our amazing speakers from THY Turkish Technology"
+            data-tr="THY Turkish Technology'den harika konuşmacılarımızla tanışın">
+            Meet our amazing speakers from THY Turkish Technology
+        </p>
+        <div class="bwai-speakers-grid">
+            <div class="bwai-speaker-card">
+                <div class="bwai-speaker-photo">
+                    <img src="images/levent_kantarcıoglu.jpg" alt="Levent Kantarcıoğlu">
+                </div>
+                <div class="bwai-speaker-info">
+                    <h3>Levent Kantaroğlu</h3>
+                    <span class="bwai-speaker-company">THY Turkish Technology</span>
+                    <p class="translate" data-en="Mobile Team Leader / Google Developer Expert"
+                        data-tr="Mobil Takım Lideri / Google Developer Expert">
+                        Mobil Takım Lideri / Google Developer Expert
+                    </p>
+                </div>
+            </div>
+            <div class="bwai-speaker-card">
+                <div class="bwai-speaker-photo">
+                    <img src="images/duygu_aran.jpg" alt="Duygu Aran">
+                </div>
+                <div class="bwai-speaker-info">
+                    <h3>Duygu Aran</h3>
+                    <span class="bwai-speaker-company">THY Turkish Technology</span>
+                    <p class="translate" data-en="Mobile Developer" data-tr="Mobil Geliştirici">
+                        Mobil Geliştirici
+                    </p>
+                </div>
+            </div>
+            <div class="bwai-speaker-card">
+                <div class="bwai-speaker-photo">
+                    <img src="images/furkan_vatandaş.jpg" alt="Furkan Vatandaş">
+                </div>
+                <div class="bwai-speaker-info">
+                    <h3>Furkan Vatandaş</h3>
+                    <span class="bwai-speaker-company">THY Turkish Technology</span>
+                    <p class="translate" data-en="Mobile Developer" data-tr="Mobil Geliştirici">
+                        Mobil Geliştirici
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="bwai-schedule-section">
+        <h2 class="section-title translate" data-en="Event Schedule" data-tr="Etkinlik Akışı">Event Schedule</h2>
+        <div class="bwai-schedule-container">
+            <!-- Day 1 -->
+            <div class="bwai-schedule-day">
+                <h3 class="bwai-day-title translate" data-en="May 9 - Day 1" data-tr="9 Mayıs - 1. Gün">9 Mayıs - 1. Gün
+                </h3>
+                <div class="bwai-timeline">
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">9:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Registration" data-tr="Kayıt">Kayıt</h4>
+                            <p class="translate" data-en="Doors open and attendee registration is completed."
+                                data-tr="Kapı açılışı ve katılımcı kayıtlarının tamamlanması süreci.">Kapı açılışı ve
+                                katılımcı kayıtlarının tamamlanması süreci.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">9:30</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Keynote" data-tr="Açılış">Açılış</h4>
+                            <p class="translate" data-en="Event kickoff and briefing on the day's program."
+                                data-tr="Etkinliğe resmi başlangıç ve günün programı hakkında detaylı bilgilendirme.">
+                                Etkinliğe resmi başlangıç ve günün programı hakkında detaylı bilgilendirme.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">10:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Workshop" data-tr="Atölye">Atölye</h4>
+                            <p class="translate" data-en="Introduction to AI tools and fundamental usage techniques."
+                                data-tr="Yapay zeka araçlarına giriş ve temel kullanım tekniklerinin gösterilmesi.">
+                                Yapay zeka araçlarına giriş ve temel kullanım tekniklerinin gösterilmesi.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">12:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Lunch" data-tr="Öğle Yemeği">Öğle Yemeği</h4>
+                            <p class="translate" data-en="Lunch break for attendees and speakers."
+                                data-tr="Katılımcılar ve konuşmacılar için öğle yemeği ve dinlenme arası.">Katılımcılar
+                                ve konuşmacılar için öğle yemeği ve dinlenme arası.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">13:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Practice" data-tr="Pratik">Pratik</h4>
+                            <p class="translate" data-en="Hands-on testing of learned concepts on your own computers."
+                                data-tr="Öğrenilen teorik bilgilerin bilgisayarlarınızda uygulamalı olarak test edilmesi.">
+                                Öğrenilen teorik bilgilerin bilgisayarlarınızda uygulamalı olarak test edilmesi.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">16:00 - 18:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Extra Session" data-tr="Ek Oturum">Ek Oturum</h4>
+                            <p class="translate" data-en="Extra session with mentors." data-tr="Mentörlerle ek oturum.">
+                                Mentörlerle ek oturum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="bwai-schedule-day">
+                <h3 class="bwai-day-title translate" data-en="May 10 - Day 2" data-tr="10 Mayıs - 2. Gün">10 Mayıs - 2.
+                    Gün</h3>
+                <div class="bwai-timeline">
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">10:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Welcome" data-tr="Karşılama">Karşılama</h4>
+                            <p class="translate" data-en="Prep for day two and starting the day with morning coffee."
+                                data-tr="İkinci güne hazırlık ve sabah kahvesi eşliğinde enerji toplayarak güne başlama.">
+                                İkinci güne hazırlık ve sabah kahvesi eşliğinde enerji toplayarak güne başlama.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">10:30</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Workshop" data-tr="Atölye">Atölye</h4>
+                            <p class="translate" data-en="Introduction to AI tools and fundamental usage techniques."
+                                data-tr="Yapay zeka araçlarına giriş ve temel kullanım tekniklerinin gösterilmesi.">
+                                Yapay zeka araçlarına giriş ve temel kullanım tekniklerinin gösterilmesi.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">12:30</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Lunch" data-tr="Öğle Yemeği">Öğle Yemeği</h4>
+                            <p class="translate" data-en="A quick meal break to recharge."
+                                data-tr="Projeye kısa bir ara verip yemek eşliğinde enerji toplama molası.">Projeye kısa
+                                bir ara verip yemek eşliğinde enerji toplama molası.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">13:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Practice" data-tr="Pratik">Pratik</h4>
+                            <p class="translate" data-en="Hands-on testing of learned concepts on your own computers."
+                                data-tr="Öğrenilen teorik bilgilerin bilgisayarlarınızda uygulamalı olarak test edilmesi.">
+                                Öğrenilen teorik bilgilerin bilgisayarlarınızda uygulamalı olarak test edilmesi.</p>
+                        </div>
+                    </div>
+
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">15:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Practice" data-tr="Pratik">Pratik</h4>
+                            <p class="translate" data-en="Hands-on testing of learned concepts on your own computers."
+                                data-tr="Öğrenilen teorik bilgilerin bilgisayarlarınızda uygulamalı olarak test edilmesi.">
+                                Öğrenilen teorik bilgilerin bilgisayarlarınızda uygulamalı olarak test edilmesi.</p>
+                        </div>
+                    </div>
+                    <div class="bwai-timeline-item">
+                        <div class="bwai-timeline-time">17:00</div>
+                        <div class="bwai-timeline-content">
+                            <h4 class="translate" data-en="Closing" data-tr="Kapanış">Kapanış</h4>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="bwai-location-section">
+        <h2 class="section-title translate" data-en="Location" data-tr="Konum">Location</h2>
+        <div class="bwai-location-card">
+            <div class="bwai-location-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+            </div>
+            <h3 class="bwai-location-name">SEYTİM</h3>
+            <p class="bwai-location-desc">Seyhan Belediyesi Teknoloji ve İnovasyon Merkezi</p>
+            <a href="https://www.google.com/maps/place/Seytim+-+Seyhan+Belediyesi+Teknoloji+ve+%C4%B0novasyon+Merkezi/@37.0286961,35.3073886,665m/data=!3m2!1e3!4b1!4m6!3m5!1s0x15288fc8018d7b2d:0x95e693ff4a6bc7c2!8m2!3d37.0286961!4d35.3073886!16s%2Fg%2F11ryf43mwc?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" class="bwai-map-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                    <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+                <span class="translate" data-en="Open in Google Maps" data-tr="Google Haritalar'da Aç">Open in Google
+                    Maps</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bwai-faq-section">
+        <h2 class="section-title translate" data-en="Frequently Asked Questions" data-tr="Sıkça Sorulan Sorular">FAQ
+        </h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="translate" data-en="What should I bring to the event?"
+                        data-tr="Etkinliğe gelirken ne getirmeliyim?">Etkinliğe gelirken ne getirmeliyim?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="translate"
+                        data-en="Participants should bring their own laptops. We also recommend bringing a charger and personal necessities."
+                        data-tr="Katılımcıların kendi bilgisayarlarını getirmeleri gerekmektedir. Ayrıca şarj aleti ve kişisel ihtiyaçlarınızı da yanınıza almanızı öneririz.">
+                        Participants should bring their own laptops. We also recommend bringing a charger and personal
+                        necessities.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="translate" data-en="What will we do at the event?"
+                        data-tr="Etkinlikte ne yapacağız?">Etkinlikte ne yapacağız?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="translate"
+                        data-en="During the event, participants will develop their own applications using Google technologies. The main technologies to be used are Flutter, Firebase, and artificial intelligence tools."
+                        data-tr="Etkinlik boyunca katılımcılar, Google teknolojilerini kullanarak kendi uygulamalarını geliştirecekler. Kullanılacak başlıca teknolojiler: Flutter, Firebase, Yapay zeka araçları">
+                        During the event, participants will develop their own applications using Google technologies.
+                        The main technologies to be used are Flutter, Firebase, and artificial intelligence tools.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="translate" data-en="Will there be food and drinks?"
+                        data-tr="Yemek ve içecek olacak mı?">Yemek ve içecek olacak
+                        mı?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="translate"
+                        data-en="Yes! During the event, food and drinks will be provided to the participants."
+                        data-tr="Evet! Etkinlik süresince katılımcılara yemek ve içecek ikramı sağlanacaktır.">Evet!
+                        Etkinlik
+                        süresince katılımcılara yemek ve içecek ikramı sağlanacaktır.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="translate" data-en="Do I need to install any programs beforehand?"
+                        data-tr="Önceden yüklemem gereken programlar var mı?">Önceden yüklemem gereken programlar
+                        var mı?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="translate"
+                        data-en="Yes, you need to install the following tools before the event: Flutter SDK, A mobile emulator"
+                        data-tr="Evet, etkinlik öncesinde aşağıdaki araçların kurulu olması gerekmektedir:
+
+                        Flutter SDK
+                        Bir mobil emülatör">Evet, etkinlik öncesinde aşağıdaki araçların kurulu olması gerekmektedir:
+
+                        Flutter SDK
+                        Bir mobil emülatör</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="translate" data-en="Who can participate?" data-tr="Kimler katılabilir?">Kimler
+                        katılabilir?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="translate"
+                        data-en="Anyone interested in software development can participate in the event. It is suitable for everyone from beginner to advanced levels."
+                        data-tr="Yazılım geliştirmeye ilgi duyan herkes etkinliğe katılabilir.
+Başlangıç seviyesinden ileri seviyeye kadar herkese uygundur.">Yazılım geliştirmeye ilgi duyan herkes
+                        etkinliğe katılabilir.
+                        Başlangıç seviyesinden ileri seviyeye kadar herkese uygundur.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="translate" data-en="Do I need a team to participate?"
+                        data-tr="Katılmak için ekip gerekli mi?">Katılmak için ekip gerekli mi?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="translate"
+                        data-en="No, you can participate individually. You can form a team during the event." data-tr="Hayır, bireysel olarak da katılabilirsiniz.
+Etkinlik sırasında ekip oluşturabilirsiniz.">Hayır,
+                        bireysel olarak da katılabilirsiniz.
+                        Etkinlik sırasında ekip oluşturabilirsiniz.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span class="translate" data-en="Will there be mentor support during the event?"
+                        data-tr="Etkinlik boyunca mentör desteği olacak mı?">Etkinlik boyunca mentör desteği olacak
+                        mı?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p class="translate"
+                        data-en="Yes! During the event, you will receive support from experienced mentors for your projects."
+                        data-tr="Evet! Etkinlik süresince projeleriniz için deneyimli mentörlerden destek alabilirsiniz.">
+                        Evet!
+                        Etkinlik
+                        süresince projeleriniz için deneyimli mentörlerden destek alabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="bwai-sponsors-section">
+        <h2 class="section-title translate" data-en="Our Sponsors" data-tr="Sponsorlarımız">Our Sponsors</h2>
+        <div class="bwai-sponsors-marquee">
+            <div class="bwai-sponsors-track" id="sponsorsTrack">
+                <!-- Sponsor logos — replace src with actual sponsor logo paths -->
+                <div class="bwai-sponsor-item"><img src="images/sponsors/sponsor1.png" alt="Sponsor 1"></div>
+                <div class="bwai-sponsor-item"><img src="images/sponsors/sponsor2.png" alt="Sponsor 2"></div>
+                <div class="bwai-sponsor-item"><img src="images/sponsors/sponsor3.png" alt="Sponsor 3"></div>
+                <div class="bwai-sponsor-item"><img src="images/sponsors/sponsor4.png" alt="Sponsor 4"></div>
+                <div class="bwai-sponsor-item"><img src="images/sponsors/sponsor5.png" alt="Sponsor 5"></div>
+                <div class="bwai-sponsor-item"><img src="images/sponsors/sponsor6.png" alt="Sponsor 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/gdg_adana/" target="_blank"><svg width="24px" height="24px"
+                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                            fill="#eb34d8"></path>
+                        <path
+                            d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                            fill="#eb34d8"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                            fill="#eb34d8"></path>
+                    </g>
+                </svg></a>
+            <a href="https://x.com/gdg_adana" target="_blank">
+                <svg style="fill: white;" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                    viewBox="0 0 24 24">
+                    <g>
+                        <path
+                            d="M21.159809,2C21.623091,2,22,2.376909,22,2.840191v18.319618C22,21.623091,21.623091,22,21.159809,22H2.84019   C2.37691,22,2,21.623091,2,21.159809V2.840191C2,2.376909,2.37691,2,2.84019,2H21.159809 M21.159809,1H2.84019   C1.82388,1,1,1.823879,1,2.840191v18.319618C1,22.176121,1.82388,23,2.84019,23h18.319618C22.176121,23,23,22.176121,23,21.159809   V2.840191C23,1.823879,22.176121,1,21.159809,1L21.159809,1z" />
+                    </g>
+                    <path
+                        d="M13.523985,10.775623L19.480984,4h-1.41143l-5.174801,5.88195L8.764665,4H4l6.246901,8.895341L4,20h1.411431  l5.461361-6.21299L15.235336,20H20L13.523985,10.775623z M11.590199,12.973429l-0.633908-0.886331L5.920428,5.041171h2.168246  l4.065295,5.6884l0.631236,0.886331l5.283681,7.39365H15.90064L11.590199,12.973429z" />
+                </svg>
+            </a>
+            <a href="https://tr.linkedin.com/company/gdg-adana" target="_blank"><svg width="25px" height="25px"
+                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path
+                            d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"
+                            fill="#0056d6"></path>
+                        <path
+                            d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z"
+                            fill="#0056d6"></path>
+                        <path
+                            d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z"
+                            fill="#0056d6"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                            fill="#0056d6"></path>
+                    </g>
+                </svg></a>
+        </div>
+        <p class="translate" data-en="© 2025 GDG Community. All rights reserved."
+            data-tr="© 2025 GDG Topluluğu. Tüm hakları saklıdır." style="color: white;">&copy; 2025 GDG Community. All
+            rights reserved.</p>
+    </footer>
+
+    <script src="js/buildwithai.js"></script>
+</body>
+
+</html>
