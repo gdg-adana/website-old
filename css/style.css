@@ -569,7 +569,8 @@ section {
     max-height: calc(100vh - 220px);
 }
 
-.event-card a {
+.event-card a,
+.event-card-inner {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -578,6 +579,7 @@ section {
     outline: none;
     border: none;
     text-decoration: none;
+    color: inherit;
 }
 
 .event-overlay {
@@ -642,8 +644,15 @@ section {
     font-size: 14px;
 }
 
+.event-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .event-button {
-    align-self: flex-start;
+    display: inline-block;
     padding: 10px 24px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.15);
@@ -651,11 +660,23 @@ section {
     color: #ffffff;
     font-weight: 600;
     transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.event-button-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .event-card:hover .event-button {
     background: var(--google-blue);
     color: #fff;
+}
+
+.event-card:hover .event-button-outline {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Join Section */
