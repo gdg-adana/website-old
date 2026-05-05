@@ -959,18 +959,9 @@ section {
 }
 
 .sponsor-logo-img {
-    height: 48px;
-    max-height: 48px;
+    height: 60px;
+    max-height: 60px;
     width: auto;
-    filter: grayscale(100%);
-    opacity: 0.9;
-    transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-}
-
-.sponsor-logo-img:hover {
-    filter: none;
-    opacity: 1;
-    transform: translateY(-2px);
 }
 
 @keyframes sponsor-scroll {
@@ -1404,29 +1395,17 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
-    width: 200px;
+    height: 140px;
+    width: 300px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sponsor-logo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .sponsor-logo img {
-    max-height: 60px;
-    max-width: 160px;
+    max-height: 110px;
+    max-width: 250px;
     object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-}
-
-.sponsor-logo:hover img {
-    filter: grayscale(0%);
 }
 
 @keyframes scroll {
@@ -1442,12 +1421,4 @@ footer p {
 body.dark-mode .sponsor-logo {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-}
-
-body.dark-mode .sponsor-logo img {
-    filter: grayscale(100%) brightness(0.8);
-}
-
-body.dark-mode .sponsor-logo:hover img {
-    filter: grayscale(0%) brightness(1);
 }
